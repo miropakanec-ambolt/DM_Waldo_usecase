@@ -1,0 +1,29 @@
+
+version: "3"
+services:
+  emily-dm_waldo_server-rdo7sd-prod:
+    image: emily-dm_waldo_server-rdo7sd-prod
+    container_name: emily-dm_waldo_server-rdo7sd-prod
+    command: python3 ${MAIN} -e ".prod.env"
+    restart: always
+    ports:
+      - ${HOST_PORT}:${CONTAINER_PORT}
+    networks:
+      - emily-dm_waldo_server-rdo7sd-prod-network
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    volumes:
+      - .:/workspace:cached
+      
+
+    runtime: ${RUNTIME}
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=${NVIDIA_VISIBLE_DEVICES}
+      - NVIDIA_DRIVER_CAPABILITIES=${NVIDIA_DRIVER_CAPABILITIES}
+    ipc: ${IPC}
+networks:
+  emily-dm_waldo_server-rdo7sd-prod-network:
+    name: emily-dm_waldo_server-rdo7sd-prod-network
+    driver: bridge
+  
