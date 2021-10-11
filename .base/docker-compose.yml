@@ -1,0 +1,19 @@
+
+version: "3"
+services:
+  emily-dm_waldo_server-rdo7sd:
+    image: emily-dm_waldo_server-rdo7sd
+    container_name: emily-dm_waldo_server-rdo7sd
+    build:
+      context: ../
+
+    volumes:
+      - ../:/workspace:cached
+
+    networks:
+      - emily-dm_waldo_server-rdo7sd-network
+
+networks:
+  emily-dm_waldo_server-rdo7sd-network:
+    name: emily-dm_waldo_server-rdo7sd-network
+    driver: bridge

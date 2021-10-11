@@ -1,0 +1,8 @@
+{
+    "id": "RDO7SD",
+    "name": "DM_Waldo_Server",
+    "containerName": "emily-dm_waldo_server-rdo7sd",
+    "image": "base",
+    "imageVersion": "1.0.0",
+    "mountTargets": []
+}

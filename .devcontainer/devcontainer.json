@@ -1,0 +1,22 @@
+
+{
+  "name": "DM_Waldo_Server",
+  "dockerComposeFile": [
+    "../.base/docker-compose.yml", "./docker-compose.yml"
+  ],
+  "service": "emily-dm_waldo_server-rdo7sd",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "extensions": [
+    "ms-python.python", 
+    "ms-azuretools.vscode-docker", 
+    "hnw.vscode-auto-open-markdown-preview", 
+    "ms-python.vscode-pylance"
+  ],
+  "runServices": [],
+  "remoteEnv": {},
+  "settings": {
+    "terminal.integrated.shell.linux": null
+  }
+}
+
