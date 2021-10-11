@@ -5,9 +5,9 @@ services:
 
     # Add your custom configuration here!
     expose:
-      - 4242
+      - 4343
     ports:
-      - "4242:4242"
+      - "4343:4343"
 
     networks:
       - emily-dm_waldo_server-rdo7sd-network
