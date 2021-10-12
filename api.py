@@ -45,7 +45,7 @@ app.add_middleware(
 )
 
 
-@app.post('/predict')
+@app.post('usecase1/predict')
 def predict(image: UploadFile = File(...)):
     try:
         return {
@@ -58,9 +58,9 @@ def predict(image: UploadFile = File(...)):
     
 
 
-@app.get('/test')
+@app.get('/health')
 def test():
-    return {"data": "HELLO"}
+    return {"data": "Success"}
 
 
 if __name__ == '__main__':
