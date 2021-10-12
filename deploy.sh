@@ -20,4 +20,4 @@ rm -rf linux
 
 FILE_PATH=$( cd "$(dirname "$0")" ; pwd -P )
 
-docker-compose --env-file "$FILE_PATH/.prod.env" -f "$FILE_PATH/docker-compose.prod.yml" up -d
+sudo docker-compose --env-file "$FILE_PATH/.prod.env" -f "$FILE_PATH/docker-compose.prod.yml" up -d
