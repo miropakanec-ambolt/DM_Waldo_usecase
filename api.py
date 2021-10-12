@@ -45,7 +45,7 @@ app.add_middleware(
 )
 
 
-@app.post('usecase1/predict')
+@app.post('/usecase1/predict')
 def predict(image: UploadFile = File(...)):
     try:
         return {
